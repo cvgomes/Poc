@@ -1,33 +1,49 @@
 import { Component } from '@angular/core';
-import { Grocery } from '../../models/grocery';
-import { GroceryService } from '../../services/grocery.service';
+import { Article } from '../../models/article';
+import { ArticleService } from '../../services/article.service';
 import { OnInit } from '@angular/core';
 
+//todo do we need the provider here?... its already on the module
 @Component({
     providers: [
-        GroceryService
+        ArticleService
     ],
     templateUrl: 'app/components/home/home.template.html'
 })
 export class HomeComponent implements OnInit {
 
-    constructor(private groceryService: GroceryService) {}
+    constructor(private articleService: ArticleService) {}
 
-    title = 'Groceries';
-    groceries: Grocery[];
+    articles: Article[];
+    selectedArticle: Article;
 
-    selectedGrocery: Grocery;
-
-    onSelect(grocery: Grocery): void {
-        this.selectedGrocery = grocery;
+    onSelect(article: Article): void {
+        this.selectedArticle = article;
     }
 
-    getGroceries(): void {
-        this.groceryService.getGroceries().then(groceries => this.groceries = groceries);
+    getArticles(): void {
+        this.articleService.getArticles()
+            .then((articles) => {
+                this.articles = articles;
+                console.log(this.articles);
+            });
+    }
+
+
+    addArticle(articleName:string):void {
+        articleName = articleName.trim();
+        if(!articleName) {return;}
+        this.articleService.createArticle(articleName)
+            .then(
+                article => {
+                    this.articles.push(article);
+                    console.log(this.articles);
+                }
+            );
     }
 
     ngOnInit(): void {
-        this.getGroceries()
+        this.getArticles()
     }
 
 }
