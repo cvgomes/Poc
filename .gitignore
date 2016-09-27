@@ -2,3 +2,4 @@ webapp/node_modules/
 webapp/app/**/*.js
 webapp/app/**/*.map
 webapp/typings/
+.idea/
