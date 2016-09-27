@@ -1,0 +1,21 @@
+<h1>page 1</h1>
+<div *ngIf="selectedGrocery">
+    <h2>{{selectedGrocery.name}}</h2>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="selectedGrocery.name" placeholder="name" />
+    </div>
+    <div>
+        <label>category: </label>
+        <input [value]="selectedGrocery.categoryId" placeholder="category" />
+    </div>
+    <div>
+        <label>unit: </label>
+        <input value="{{selectedGrocery.unit}}" placeholder="unit" />
+    </div>
+</div>
+<ul>
+    <li *ngFor="let grocery of groceries" (click)="onSelect(grocery)">
+        {{grocery.name}}
+    </li>
+</ul>
