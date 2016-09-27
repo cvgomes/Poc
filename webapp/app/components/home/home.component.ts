@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Grocery } from '../models/grocery';
-import { GroceryService } from '../services/grocery.service';
+import { Grocery } from '../../models/grocery';
+import { GroceryService } from '../../services/grocery.service';
 import { OnInit } from '@angular/core';
 
 @Component({
     providers: [
         GroceryService
     ],
-    templateUrl: 'app/components/groceries.template.html'
+    templateUrl: 'app/components/home/home.template.html'
 })
-export class GroceriesComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
     constructor(private groceryService: GroceryService) {}
 

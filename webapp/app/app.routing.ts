@@ -1,23 +1,23 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { GroceriesComponent }   from './components/groceries.component';
-import { ShoppingListComponent }   from './components/shoppingList/shoppingList.component';
+import { HomeComponent }   from './components/home/home.component';
+import { ShopComponent }   from './components/shop/shop.component';
 import { MapComponent }   from './components/map/map.component';
 
 const appRoutes: Routes = [
     {
         path: '',
-        component: MapComponent,
+        component: ShopComponent,
         pathMatch: 'full'
     },
     {
-        path: 'shelve',
-        component: GroceriesComponent
+        path: 'home',
+        component: HomeComponent
     },
     {
-        path: 'list',
-        component: ShoppingListComponent
+        path: 'shop',
+        component: ShopComponent
     },
     {
         path: 'map',

@@ -4,8 +4,8 @@ import { FormsModule }      from '@angular/forms';
 import { routing }          from '../app.routing'
 
 import { AppComponent }   from '../components/app.component';
-import { GroceriesComponent }   from '../components/groceries.component';
-import { ShoppingListComponent }   from '../components/shoppingList/shoppingList.component';
+import { HomeComponent }   from '../components/home/home.component';
+import { ShopComponent }   from '../components/shop/shop.component';
 import { MapComponent }   from '../components/map/map.component';
 
 @NgModule({
@@ -16,8 +16,8 @@ import { MapComponent }   from '../components/map/map.component';
     ],
     declarations: [
         AppComponent,
-        GroceriesComponent,
-        ShoppingListComponent,
+        HomeComponent,
+        ShopComponent,
         MapComponent
     ],
     bootstrap:    [ AppComponent ]
