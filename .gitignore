@@ -3,3 +3,7 @@ webapp/app/**/*.js
 webapp/app/**/*.map
 webapp/typings/
 .idea/
+groceries-ns/platforms/
+groceries-ns/node_modules/
+groceries-ns/app/**/*.map
+groceries-ns/app/**/*.js
