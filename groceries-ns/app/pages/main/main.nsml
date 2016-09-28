@@ -1,0 +1,18 @@
+<TabView>
+    <StackLayout *tabItem="{title: 'List', iconSource: '~/icon.png'}" >
+        <list></list>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Location'}">
+        <Custom></Custom>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Example'}">
+        <ListView [items]='items'>
+            <template let-item='item'>
+                <Label [text]='item.itemDesc' ></Label>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Map'}">
+        <Map></Map>
+    </StackLayout>
+</TabView>

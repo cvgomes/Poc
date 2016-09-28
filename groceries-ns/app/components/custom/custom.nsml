@@ -1,0 +1,7 @@
+<Label text="Geolocation Enabled: {{isGeolocationEnabled}}"></Label>
+
+<StackLayout>
+    <Button text="enable Location" (tap)="enableLocationTap()"></Button>
+</StackLayout>
+
+<Label text="Your location: {{currentLocation}}"></Label>
