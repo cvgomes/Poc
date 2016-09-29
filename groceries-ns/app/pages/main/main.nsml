@@ -15,4 +15,7 @@
     <StackLayout *tabItem="{title: 'Map'}">
         <Map></Map>
     </StackLayout>
+    <StackLayout *tabItem="{title: 'Photo'}">
+        <Camera></Camera>
+        </StackLayout>
 </TabView>

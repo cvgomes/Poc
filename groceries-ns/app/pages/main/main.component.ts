@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ListComponent } from '../list/list.component';
 import { MapComponent } from '../map/map.component';
 import { CustomComponent } from '../../components/custom/custom.component';
+import {CameraComponent} from "../camera/camera.component";
 
 export class DataItem {
     constructor(public itemDesc: string) {}
@@ -12,7 +13,9 @@ export class DataItem {
     directives: [
         ListComponent,
         CustomComponent,
-        MapComponent]
+        MapComponent,
+        CameraComponent
+    ]
 })
 
 export class MainComponent {
